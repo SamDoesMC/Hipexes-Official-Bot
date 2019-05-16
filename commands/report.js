@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const botconfig = require("../config.json");
-const black = botconfig.black;
 const errors = require("../utils/errors.js");
 
 module.exports.run = async (bot, message, args) => {
@@ -16,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Reports")
-    .setColor(black)
+    .setColor(000000)
     .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
     .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
     .addField("Channel", message.channel)
