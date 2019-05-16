@@ -442,25 +442,6 @@ if(command === "rules")
   return client.channels.get(modlog.id).sendEmbed(embed);
   }
   }
-  
-  if (command === "report") {
-     let reason = args.slice(1).join(' ');
-    let user = message.mentions.users.first();
-    let modlog = message.guild.channels.find('name', 'log');
-    if (!modlog) return message.channel.send('``I cannot find a log channel``');
-    if (reason.length < 1) return message.channel.send('``You Must Add A Reason When Reporting A User``.');
-    if (message.mentions.users.size < 1) return message.channel.send('``You Must Mention A User``.').catch(console.error);
-    message.delete();
-    const embed = new Discord.RichEmbed()
-    .setColor(000000)
-    .addField('Action:', 'Report')
-    .addField('User:', `${user.username}#${user.discriminator}`)
-    .addField('Modrator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Reason', reason);
-    return client.channels.get(modlog.id).sendEmbed(embed);
-
-
-    }
 
     
     if(command === "purge") {
