@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
           .setColor("000000")
           .setThumbnail(sicon)
           .setTimestamp()
-          .addField(`Ghostly Hamster#2526`,`Made The Website For Hipexes / Gaming Community \n [ [Hipexes](https://hipexes.yolasite.com/) ] `);
+          .addField(`Official Website`,`Made The Website For Hipexes / Gaming Community \n [ [Hipexes](https://hipexes.yolasite.com/) ] `);
           return message.channel.send(serverembed);
        };
 
