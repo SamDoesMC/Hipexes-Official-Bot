@@ -265,8 +265,8 @@ function play(guild, song) {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "h! Bot Prefix",
-    description: "The Bot Is Currently In Progress",
+    title: "The Bot Is Currently In Progress",
+    description: "The Bot Is Needed Other Commands / To Use Other Commands Go To #cmd",
     timestamp: new Date(),
     footer: {
       text: "© Example"
