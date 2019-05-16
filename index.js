@@ -12,6 +12,22 @@ fs.readdir("./events/", (err, files) => {
       client.on(eventName, (...args) => eventFunction.run(client, ...args));
     });
   });
+
+  client.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+    if (!channel) return;
+  
+    channel.send(`Welcome To The Server Hope You Enjoy , ${member}!`);
+  });
+
+  client.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+    if (!channel) return;
+  
+    channel.send(`Sorry To See Yah Leaving , ${member}!`);
+  });
+
+
   client.on("message", message => {
     if (message.author.bot) return;
     if(message.content.indexOf(config.prefix) !== 0) return;
