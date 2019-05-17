@@ -13,18 +13,15 @@ fs.readdir("./events/", (err, files) => {
     });
   });
 
-  client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find(ch => ch.name === 'welcome');
-    if (!channel) return;
-  
-    channel.send(`Welcome To The Server Hope You Enjoy , ${member}!`);
-  });
+client.on('guildMemberAdd', member => {
+    member.send(`Welcome To Hipexes / Gaming Server / Official Community ${member} !`);
+ });
 
   client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.find(ch => ch.name === 'welcome');
     if (!channel) return;
   
-    channel.send(`Sorry To See Yah Leaving , ${member}!`);
+    channel.send(`Sorry To See You Leaving I Hoped You Enjoy This Server , ${member}!`);
   });
 
 
