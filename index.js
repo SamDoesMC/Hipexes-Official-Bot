@@ -14,7 +14,7 @@ fs.readdir("./events/", (err, files) => {
   });
 
 client.on('guildMemberAdd', member => {
-    member.send(`Welcome To Hipexes / Gaming Server / Official Community ${member} \n The Server Is All About Gaming/Friends/Streaming/Youtuber's\n Visit The Official Website!`);
+    member.send(`**Welcome To Hipexes / Gaming Server / Official Community** ${member} \n **The Server Is All About Gaming/Friends/Streaming/Youtuber's**\n **Visit The Official Website!** \n https://hipexes.yolasite.com/`);
  });
 
   client.on('guildMemberRemove', member => {
